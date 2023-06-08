@@ -196,5 +196,4 @@ function complete_main_table_2() {
     pp.showdescription(formula, 3);
     pp.addtorightpannel(plot_graph_btn, 3);
 }
-activity6();
 //# sourceMappingURL=activity6.js.map
