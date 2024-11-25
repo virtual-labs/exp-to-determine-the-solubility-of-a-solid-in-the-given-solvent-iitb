@@ -13,9 +13,9 @@ var obs_table = `
     <th scope="col"></th>
     <th scope="col">Temp (T)</th>
     <th scope="col">Concentration (X)</th>
-    <th scope="col">ln(X) (Y)</th>
-    <th scope="col">1/T (X1)</th>
-    <th scope="col">ln(T) (X2)</th>
+    <th scope="col">Y = ln(X)</th>
+    <th scope="col">X1 = 1/T</th>
+    <th scope="col">X2 = ln(T)</th>
     <th id="act4-tab1-checked" scope="col">Check</th>
     
   </tr>
@@ -52,7 +52,7 @@ function activity6() {
     // pp.addtoleftpannel(button);
     // pp.addtoleftpannel(button);
     pp.addoffcanvas(3);
-    pp.showtitle("Observation Table", 3);
+    pp.showtitle('Observation Table', 3);
     pp.showdescription('<p style="background-color: #f4ccccff; border-radius: 10px; border: black; padding: 5%; font-weight: 500; font-size: 2.0vw;">Enter all the readings in the table columns</p>', 3);
     // document.getElementById('hide_panel3').click();
     pp.showscore(200, 3);
@@ -83,9 +83,9 @@ function complete_tab1() {
         // table_1[i][3] = val4
         row.innerHTML = `
         <td>${i + 1}</td>
-        <td></td>
         <td>${T[i]}</td>
         <td>${X[i]}</td>
+        <td>${Y[i].toFixed(3)}</td>
         <td>${X1[i].toFixed(5)}</td>
         <td>${X2[i].toFixed(2)}</td>
         `;
@@ -133,9 +133,9 @@ function complete_tab1() {
     pp.addtorightpannel(verify_summations_btn_2, 3);
 }
 function act6_verify_tab1() {
-    let val1 = document.getElementById('a6-inp1');
-    let val2 = document.getElementById('a6-inp2');
-    let val3 = document.getElementById('a6-inp3');
+    let val1 = (document.getElementById('a6-inp1'));
+    let val2 = (document.getElementById('a6-inp2'));
+    let val3 = (document.getElementById('a6-inp3'));
     if (!verify_values(parseFloat(val1.value), Y[0])) {
         alert('Y value is incorreect');
         return;
@@ -154,26 +154,26 @@ function act6_verify_tab1() {
     //   trigger_offcavnas();
 }
 function verify_summations() {
-    let val1 = document.getElementById("act6-tab3-inp1");
-    let val2 = document.getElementById("act6-tab3-inp2");
-    let val3 = document.getElementById("act6-tab3-inp3");
+    let val1 = (document.getElementById('act6-tab3-inp1'));
+    let val2 = (document.getElementById('act6-tab3-inp2'));
+    let val3 = (document.getElementById('act6-tab3-inp3'));
     console.log(parseFloat(val1.value));
     // console.log(Q.value, To.value, Ti.value, ti.value, to.value);
     if (!verify_values(parseFloat(val1.value), sum_y)) {
-        console.log("please correct the summaton of Y values");
+        console.log('please correct the summaton of Y values');
         return;
     }
     if (!verify_values(parseFloat(val2.value), sum_x1)) {
-        console.log("please correct the summaton of X1 values");
+        console.log('please correct the summaton of X1 values');
         return;
     }
     if (!verify_values(parseFloat(val3.value), sum_x2)) {
-        console.log("please correct the summaton of  X2 values");
+        console.log('please correct the summaton of  X2 values');
         return;
     }
     // pp.addtorightpannel(act5_ob_btn, 3);
     document.getElementById('panel1_btn').remove();
-    alert("all values are correct!");
+    alert('all values are correct!');
     // var bsOffcanvas = new bootstrap.Offcanvas(
     //   document.getElementById("offcanvasRight3")
     // );
