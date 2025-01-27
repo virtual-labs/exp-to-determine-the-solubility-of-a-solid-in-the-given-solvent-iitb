@@ -1,11 +1,37 @@
 [
     {
-        "question": "Sample Question",
+        "question": "What fundamental aspects of a system does Solid-Liquid Equilibria (SLE) help understand? ",
         "qid": 1,
-        "option_a": "Option A",
-        "option_b": "Option B",
-        "option_c": "Option C",
-        "option_d": "Option D",
-        "correct_option": "a"
+        "option_a": "Only temperature variations ",
+        "option_b": "Only composition changes ",
+        "option_c": "Temperature, composition, and phase behaviour ",
+        "option_d": "Only pressure changes ",
+        "correct_option": "c"
+    },
+    {
+        "question": "In pharmaceutical manufacturing, why is SLE understanding crucial? ",
+        "qid": 2,
+        "option_a": "To reduce production costs ",
+        "option_b": "To control crystal purity affecting drug efficacy ",
+        "option_c": "To increase production speed ",
+        "option_d": "To improve packaging methods ",
+        "correct_option": "b"
+    },
+    {
+        "question": "Which industry uses SLE knowledge to control texture and quality through ice crystal formation? ",
+        "qid": 3,
+        "option_a": "Petroleum industry",
+        "option_b": "Mining industry ",
+        "option_c": "Food industry ",
+        "option_d": "Electronics industry ",
+        "correct_option": "c"
+    },{
+        "question": "What role does SLE play in the petroleum industry? ",
+        "qid": 4,
+        "option_a": "Improving oil quality ",
+        "option_b": "Increasing extraction rates ",
+        "option_c": "Preventing wax deposition in pipelines",
+        "option_d": "Enhancing combustion efficiency",
+        "correct_option": "c"
     }
 ]

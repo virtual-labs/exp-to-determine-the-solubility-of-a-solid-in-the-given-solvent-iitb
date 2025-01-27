@@ -1,11 +1,38 @@
 [
     {
-        "question": "Sample Question",
+        "question": "Which analytical technique is implemented to identify solubility.",
         "qid": 1,
-        "option_a": "Option A",
-        "option_b": "Option B",
-        "option_c": "Option C",
-        "option_d": "Option D",
+        "option_a": "UV analysis",
+        "option_b": "HPLC",
+        "option_c": "GC",
+        "option_d": "Titration",
+        "correct_option": "a"
+    },
+    {
+        "question": "What is the correct way to introduce solute into system",
+        "qid": 2,
+        "option_a": "Continuously add specific amount at specific time interval",
+        "option_b": "Add excess quantity in advance",
+        "option_c": "Add small quantity and allow it to dissolved before adding more",
+        "option_d": "Gradually decrease quantity of solute added with time",
+        "correct_option": "c"
+    },
+    {
+        "question": "What will be the allowable R<sup>2</sup> value during calibration",
+        "qid": 3,
+        "option_a": "<0.9",
+        "option_b": ">0.9",
+        "option_c": ">0.99",
+        "option_d": "=0",
+        "correct_option": "c"
+    },
+    {
+        "question": "What is the general trend observed between solubility and temperature",
+        "qid": 4,
+        "option_a": "Increase with temperature",
+        "option_b": "Decrease with temperature",
+        "option_c": "Remain constant",
+        "option_d": "First increase then decrease",
         "correct_option": "a"
     }
 ]
