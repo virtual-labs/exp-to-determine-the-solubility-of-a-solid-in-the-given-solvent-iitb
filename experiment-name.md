@@ -1,0 +1,1 @@
+## To determine the solubility of a solid in the given solvent (sle)
