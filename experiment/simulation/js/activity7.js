@@ -40,11 +40,11 @@
 // `;
 // var all_properties = `
 // <div style="background-color: #f4ccccff; border-radius: 10px; border: black; padding: 5%; font-weight: 500; font-size: 2.0vw;">
-//   <div class="row" style="font-size: calc(0.7vw + 12px);"> 
+//   <div class="row" style="font-size: calc(0.7vw + 12px);">
 //   <div class="col-12"><h4>Use these formlae for calculation</h4></div>
 //   <div class="col-12"><span style="font-weight: 600;">&rho;</span> (kg/m<sup>3</sup>)= 13.6 x 1000</div>
 //   <div class="col-12"><span style="font-weight: 600;">g</span> (m/s<sup>2</sup>)= 9.81</div>
-//   <div class="col-12"><span style="font-weight: 600;">P<sub>2</sub></span> (KPa)= P<sub>1</sub> - (&rho; x g x &Delta;H)/(1000 x 1000)</div>  
+//   <div class="col-12"><span style="font-weight: 600;">P<sub>2</sub></span> (KPa)= P<sub>1</sub> - (&rho; x g x &Delta;H)/(1000 x 1000)</div>
 //   </div>
 //   </div>
 // </div>
@@ -205,20 +205,20 @@ function draw_chart() {
     pp.clearleftpannel();
     pp.addcanvas('myChart');
     if (document.getElementById('panel1_btn')) {
-        document.getElementById("panel1_btn").remove();
+        document.getElementById('panel1_btn').remove();
     }
-    pp.addButtonToRightPanel("hello", print_hello, 3);
+    pp.addButtonToRightPanel('Completed', print_hello, 3);
     for (let i = 0; i < main_table_data.length; i++) {
         label.push(T[i]);
         data.push(X[i]);
     }
     calculate_y_datapoints();
     var ctx = document.getElementById('myChart');
-    ctx.style.backgroundColor = "white";
-    ctx.style.marginTop = "5px";
-    ctx.style.marginLeft = "10%";
-    ctx.style.padding = "10px";
-    ctx.style.borderRadius = "8px";
+    ctx.style.backgroundColor = 'white';
+    ctx.style.marginTop = '5px';
+    ctx.style.marginLeft = '10%';
+    ctx.style.padding = '10px';
+    ctx.style.borderRadius = '8px';
     if (typeof chart != 'undefined') {
         chart.destroy();
     }
@@ -244,13 +244,9 @@ function draw_chart() {
                     fill: false,
                     borderColor: 'red',
                     tension: 0.5,
-                    showLine: true
-                    // yAxisID: 'A',
-                    // borderWidth: 1,
-                    // borderColor: "red",
-                    // backgroundColor: "rgba(255, 0, 0, 0.5)",
+                    showLine: true,
                 },
-            ]
+            ],
         },
         options: {
             maintainAspectRatio: true,
@@ -259,16 +255,16 @@ function draw_chart() {
                     title: {
                         display: true,
                         text: 'X',
-                        font: { size: 14, weight: 'bold' }
-                    }
+                        font: { size: 14, weight: 'bold' },
+                    },
                 },
                 x: {
                     title: {
                         display: true,
                         text: 'T (K)',
-                        font: { size: 14, weight: 'bold' }
-                    }
-                }
+                        font: { size: 14, weight: 'bold' },
+                    },
+                },
             },
             plugins: {
                 title: {
@@ -276,9 +272,9 @@ function draw_chart() {
                     text: `T vs P`,
                     font: { size: 18 },
                 },
-                legend: { labels: { font: { size: 14, weight: 'bold' } } }
+                legend: { labels: { font: { size: 14, weight: 'bold' } } },
             },
-        }
+        },
     });
 }
 function calculate_y_datapoints() {
@@ -293,9 +289,9 @@ var data = [];
 var data1 = [];
 //   var pol;
 //   activity5();
-var column = ['Sr No.', "test-1", "test-2", "test-3"];
+var column = ['Sr No.', 'test-1', 'test-2', 'test-3'];
 function print_hello() {
-    console.log("hello");
+    console.log('hello');
     // pp.button.remove();
     pp.clearleftpannel();
     // var data = [["1", "<input type='text' id='val-0-0' />", "<input type='text' id='val-0-1' />", "<input value='verify' type='button' class='btn btn-primary' onclick='myverify(0);' />"], ["2","<input type='text' id='val-1-0' />", "<input type='text' id='val-1-1' />", "<input value='verify' type='button' class='btn btn-primary' onclick='myverify(1);' />"]];
@@ -305,10 +301,13 @@ function print_hello() {
     // table.draw();
     // table.load_with_inputs(arr);
 }
-var verify_variable = [[1, 2], [3, 4]];
+var verify_variable = [
+    [1, 2],
+    [3, 4],
+];
 function myverify(i) {
     for (let j = 0; j <= 1; j++) {
-        let ele = document.getElementById(`val-${i}-${j}`);
+        let ele = (document.getElementById(`val-${i}-${j}`));
         if (!verify_values(parseFloat(ele.value), verify_variable[i][j])) {
             alert(`please check ${column[j + 1]}`);
             return;

@@ -33,7 +33,7 @@ var obs_table = `
 </tbody>
 </table>
 `;
-var verify_summations_btn_2 = `<button id="panel1_btn" class="btn btn-primary" onclick="verify_summations();" style="position: absolute; bottom: 12vh; width: 90%;"> Display Observation Table</button>`;
+var verify_summations_btn_2 = `<button id="panel1_btn" class="btn btn-primary" onclick="verify_summations();" style="position: absolute; bottom: 12vh; width: 90%;">Verify</button>`;
 // var ob_btn = `<button id="panel1_btn" class="btn btn-primary" onclick="add_area_field();" style="
 // position: absolute; bottom: 12vh; width: 85%;">Next</button>`;
 var act4_btn_1 = `<button id="panel1_btn" class="btn btn-primary" onclick="complete_tab1();" style="
@@ -151,7 +151,9 @@ function act6_verify_tab1() {
     console.log('success');
     pp.showdescription('<p style="background-color: #f4ccccff; border-radius: 10px; border: black; padding: 5%; font-weight: 500; font-size: 2.0vw;">Great!! Values are correct. Click next to load complete table</p>', 3);
     pp.addtorightpannel(act4_btn_1, 3);
-    //   trigger_offcavnas();
+    // trigger_offcavnas();
+    var bsOffcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasRight3'));
+    bsOffcanvas.show();
 }
 function verify_summations() {
     let val1 = (document.getElementById('act6-tab3-inp1'));
